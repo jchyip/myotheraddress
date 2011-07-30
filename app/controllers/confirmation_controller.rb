@@ -1,4 +1,4 @@
-class ConfirmationsController < ApplicationController
+class ConfirmationController < ApplicationController
   # GET /confirmations
   # GET /confirmations.xml
   def index
