@@ -5,11 +5,15 @@
 <%= @receiver_profile.address %>
 </pre>
 
-How many packages would you like delivered?
-<form action="/deliveries/new" method="get">
-<input type="text" name="quantity" value="1">
-<input type="submit" value="Purchase" />
-</form>
+<%= form_for(@delivery) do |f| %>
+
+    <%= f.text_field :customer , :placeholder => 'Your email' %>
+    <%= f.hidden_field :receiver_profile_id, :value => @receiver_profile.id %>
+
+    <%= f.submit :value => 'Book delivery' %>
+<% end %>
+
+
 
 <p />
 

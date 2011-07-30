@@ -1,5 +1,7 @@
 Myotheraddress::Application.routes.draw do
   resources :deliveries
+  match 'mydeliveries/:id' => 'deliveries#index', :constraints => {:id => /.*/}
+  #match 'mydeliveries/:id' => 'deliveries#index' #, :constraints => {:id => /.*/}
 
   resources :receiver_profiles
 

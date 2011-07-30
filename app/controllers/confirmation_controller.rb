@@ -13,7 +13,11 @@ class ConfirmationController < ApplicationController
   # GET /confirmations/1
   # GET /confirmations/1.xml
   def show
-    @confirmation = Confirmation.find(params[:id])
+    #@confirmation = Confirmation.find(params[:id])
+    #@delivery = session[:delivery]
+    #@delivery.save
+    @delivery = Delivery.create(customer => cookies[:customer], receiver_profile_id => cookies[:receiver_profile_id])
+    @delivery.save
 
     respond_to do |format|
       format.html # show.html.erb

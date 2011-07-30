@@ -2,10 +2,18 @@ class DeliveriesController < ApplicationController
   # GET /deliveries
   # GET /deliveries.xml
   def index
-    @deliveries = Delivery.all
+    if (/^\d+$/ === params[:id])
+      @deliveries = ReceiverProfile.find(params[:id]).deliveries
+    else
+      @deliveries = Delivery.where('customer = ?', params[:id])
+    end
+    #@deliveries = Delivery.all
 
+    #params[:format] = 'raw'
+
+    #render :action => 'index'
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.xml  { render :xml => @deliveries }
     end
   end
@@ -23,7 +31,7 @@ class DeliveriesController < ApplicationController
 
   # GET /deliveries/new
   # GET /deliveries/new.xml
-  def create
+  def new
     @delivery = Delivery.new
 
     respond_to do |format|
@@ -39,11 +47,13 @@ class DeliveriesController < ApplicationController
 
   # POST /deliveries
   # POST /deliveries.xml
-  def new
+  def create
     @delivery = Delivery.new(params[:delivery])
-    session[:delivery] = @delivery
+    cookies[:delivery] = @delivery
+    cookies[:customer] = @delivery.customer
+    cookies[:receiver_profile_id] = @delivery.receiver_profile.id
     
-    redirect_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=USJLLDC9ZYDRS&quantity='+params[:quantity]
+    redirect_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=USJLLDC9ZYDRS'
 
     #respond_to do |format|
     # if @delivery.save

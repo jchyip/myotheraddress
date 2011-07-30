@@ -3,4 +3,6 @@
 <h1>Use your other address</h1>
 
 <p>Copy and paste the following:</p>
-<div id="copy-address">North Bondi RSL</div>
+<pre>
+<%= ReceiverProfile.find(cookies[:receiver_profile_id]).address %>
+</pre>

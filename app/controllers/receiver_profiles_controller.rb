@@ -14,6 +14,7 @@ class ReceiverProfilesController < ApplicationController
   # GET /receiver_profiles/1.xml
   def show
     @receiver_profile = ReceiverProfile.find(params[:id])
+    @delivery = Delivery.new
 
     respond_to do |format|
       format.html # show.html.erb

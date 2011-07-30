@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730063134) do
+ActiveRecord::Schema.define(:version => 20110730075737) do
 
   create_table "confirmations", :force => true do |t|
     t.datetime "created_at"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20110730063134) do
     t.date     "order_date"
     t.date     "expected_date"
     t.string   "status"
+    t.integer  "receiver_profile_id"
+    t.string   "customer"
   end
 
   create_table "logins", :force => true do |t|

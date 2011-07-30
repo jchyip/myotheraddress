@@ -4,16 +4,56 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: 
+1: 
   id: 1
+  receiver_profile_id: 1
+  customer: jmaddi@gmail.com
   name: Jason's books
   order_date: '20/05/2011'
   expected_date: '01/06/2011'
   status: 'Received'
   
-two:
+2:
   id: 2
+  receiver_profile_id: 1
+  customer: jmaddi@gmail.com
   name: External keyboards
+  order_date: '30/07/2011'
+  expected_date: '10/08/2011'
+  status: 'Pending'
+
+3: 
+  id: 3
+  receiver_profile_id: 2
+  customer: jmaddi@gmail.com
+  name: Kindle DX
+  order_date: '20/05/2011'
+  expected_date: '01/06/2011'
+  status: 'Received'
+  
+4:
+  id: 4
+  receiver_profile_id: 2
+  customer: jmaddi@gmail.com
+  name: iPhone 5
+  order_date: '30/07/2011'
+  expected_date: '10/08/2011'
+  status: 'Pending'
+
+5: 
+  id: 5
+  receiver_profile_id: 3
+  customer: jmaddi@gmail.com
+  name: Samsung Galaxy
+  order_date: '20/05/2011'
+  expected_date: '01/06/2011'
+  status: 'Received'
+  
+6:
+  id: 6
+  receiver_profile_id: 3
+  customer: jmaddi@gmail.com
+  name: Polo shirts
   order_date: '30/07/2011'
   expected_date: '10/08/2011'
   status: 'Pending'
