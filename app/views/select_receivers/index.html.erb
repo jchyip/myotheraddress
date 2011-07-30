@@ -42,8 +42,9 @@ body, .bubbleContent, .bubbleHeading {
   var map;
   function initialize() {
     geocoder = new google.maps.Geocoder();
-    var myLatlng1 = new google.maps.LatLng(-33.893721,151.262466);
-    var myLatlng2 = new google.maps.LatLng(-33.792429,151.1901);
+    var myLatlng1 = new google.maps.LatLng(-33.889427, 151.283011);
+    var myLatlng2 = new google.maps.LatLng(-33.890375, 151.28266);
+    var myLatlng3 = new google.maps.LatLng(-33.890039, 151.282897);
     var myOptions = {
       zoom: 15,
       center: myLatlng1,
@@ -53,7 +54,7 @@ body, .bubbleContent, .bubbleHeading {
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
  
     var bubble1 = '<div class="content">'+
-        '<h1 class="bubbleHeading">Bondi RSL</h1>'+
+        '<h1 class="bubbleHeading">Nio and Tony\'s convenience store</h1>'+
         '<div class="bubbleContent"><img class="bubbleThumbnail" src="images/place_rsl.jpg" /><br /><span style="font-weight:bold">Availability</span><br />'+
         '<table><tr>'+
         '<td>Sun</td>'+
@@ -82,7 +83,37 @@ body, .bubbleContent, .bubbleHeading {
         '</div>';
 
     var bubble2 = '<div class="content">'+
-        '<h1 class="bubbleHeading">Chatswood RSL</h1>'+
+        '<h1 class="bubbleHeading">North Bondi RSL</h1>'+
+        '<div class="bubbleContent"><img class="bubbleThumbnail" src="images/place_rsl.jpg" /><br /><span style="font-weight:bold">Availability</span><br />'+
+        '<table><tr>'+
+        '<td>Sun</td>'+
+        '<td>Mon</td>'+
+        '<td>Tue</td>'+
+        '<td>Wed</td>'+
+        '<td>Thur</td>'+
+        '<td>Fri</td>'+
+        '<td>Sat</td>'+
+        '</tr>'+
+        '<tr>'+
+        '<td>08:30-20:30</td>'+
+        '<td>08:30-20:30</td>'+
+        '<td>08:30-20:30</td>'+
+        '<td>08:30-20:30</td>'+
+        '<td>08:30-20:30</td>'+
+        '<td>08:30-20:30</td>'+
+        '<td>08:30-20:30</td>'+
+        '</tr></table>'+
+        '<span style="font-weight:bold">Closed</span>'+
+        '<table><tr>'+
+        '<td>Dec 25th</td>'+
+        '</tr></table>'+
+        '<input type="submit" value="Use this address" />'+
+        '</div>'+
+        '</div>';
+
+
+    var bubble3 = '<div class="content">'+
+        '<h1 class="bubbleHeading">Julian\'s house</h1>'+
         '<div class="bubbleContent"><img class="bubbleThumbnail" src="images/place_rsl.jpg" /><br /><span style="font-weight:bold">Availability</span><br />'+
         '<table><tr>'+
         '<td>Sun</td>'+
@@ -118,7 +149,7 @@ body, .bubbleContent, .bubbleHeading {
     var marker1 = new google.maps.Marker({
         position: myLatlng1,
         map: map,
-        title: 'Sydney RSL'
+        title: 'Nio and Tonys'
     });
 
     google.maps.event.addListener(marker1, 'click', function() {
@@ -132,12 +163,28 @@ body, .bubbleContent, .bubbleHeading {
     var marker2 = new google.maps.Marker({
         position: myLatlng2,
         map: map,
-        title: 'Chatswood RSL'
+        title: 'North Bondi RSL'
     });
 
     google.maps.event.addListener(marker2, 'click', function() {
       infowindow2.open(map,marker2);
     });
+
+
+    var infowindow3 = new google.maps.InfoWindow({
+        content: bubble3
+    });
+ 
+    var marker3 = new google.maps.Marker({
+        position: myLatlng3,
+        map: map,
+        title: 'Julian\'s house'
+    });
+
+    google.maps.event.addListener(marker3, 'click', function() {
+      infowindow3.open(map,marker3);
+    });
+
   }
  
   function codeAddress() {
