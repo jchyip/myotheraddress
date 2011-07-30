@@ -2,11 +2,11 @@ class SelectReceiversController < ApplicationController
   # GET /select_receivers
   # GET /select_receivers.xml
   def index
-    @select_receivers = SelectReceiver.all
+    #@select_receivers = SelectReceiver.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @select_receivers }
+      #format.xml  { render :xml => @select_receivers }
     end
   end
 
