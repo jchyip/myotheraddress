@@ -4,8 +4,16 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+one: 
+  id: 1
+  name: Jason's books
+  order_date: '20/05/2011'
+  expected_date: '01/06/2011'
+  status: 'Received'
+  
+two:
+  id: 2
+  name: External keyboards
+  order_date: '30/07/2011'
+  expected_date: '10/08/2011'
+  status: 'Pending'

@@ -5,20 +5,22 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @deliveries.each do |delivery| %>
   <tr>
 	<td><%= delivery.name %></td>
+	<td><%= delivery.order_date %></td>
 	<td><%= delivery.expected_date %></td>
 	<td><%= delivery.status %>
 	<% if delivery.status != 'Received'%>
 	<td><%= link_to 'Received', delivery %></td>
+	<% else %>
+	<td></td>
 	<% end %>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Delivery', new_delivery_path %>
