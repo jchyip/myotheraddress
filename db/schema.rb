@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730011338) do
+ActiveRecord::Schema.define(:version => 20110730033907) do
 
   create_table "confirmations", :force => true do |t|
     t.datetime "created_at"
@@ -32,6 +32,11 @@ ActiveRecord::Schema.define(:version => 20110730011338) do
   create_table "receiver_profiles", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.string   "name"
+    t.string   "address"
+    t.integer  "rating"
   end
 
   create_table "select_receivers", :force => true do |t|

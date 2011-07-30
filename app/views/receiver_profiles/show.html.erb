@@ -1,5 +1,32 @@
 <p id="notice"><%= notice %></p>
+<h1><%= @receiver_profile.name %></h1>
 
+<pre>
+<%= @receiver_profile.address %>
+</pre>
+
+How many packages would you like delivered?
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="text" name="quantity" value="1">
+<br />
+<input type="hidden" name="business" value="jmaddi@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Package receipt">
+<input type="hidden" name="item_number" value="42">
+<input type="hidden" name="amount" value="5.00">
+<input type="hidden" name="currency_code" value="AUD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= CGI::escape(@receiver_profile.address)%>,NSW&zoom=14&size=512x312&maptype=roadmap&markers=color:blue%7C<%= @receiver_profile.latitude %>,<%= @receiver_profile.longitude %>&sensor=false" />
+
+<p />
 
 <%= link_to 'Edit', edit_receiver_profile_path(@receiver_profile) %> |
 <%= link_to 'Back', receiver_profiles_path %>
