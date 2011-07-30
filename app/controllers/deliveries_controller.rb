@@ -23,7 +23,7 @@ class DeliveriesController < ApplicationController
 
   # GET /deliveries/new
   # GET /deliveries/new.xml
-  def new
+  def create
     @delivery = Delivery.new
 
     respond_to do |format|
@@ -39,18 +39,21 @@ class DeliveriesController < ApplicationController
 
   # POST /deliveries
   # POST /deliveries.xml
-  def create
+  def new
     @delivery = Delivery.new(params[:delivery])
+    session[:delivery] = @delivery
+    
+    redirect_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=USJLLDC9ZYDRS&quantity='+params[:quantity]
 
-    respond_to do |format|
-      if @delivery.save
-        format.html { redirect_to(@delivery, :notice => 'Delivery was successfully created.') }
-        format.xml  { render :xml => @delivery, :status => :created, :location => @delivery }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @delivery.errors, :status => :unprocessable_entity }
-      end
-    end
+    #respond_to do |format|
+    # if @delivery.save
+    #   format.html { redirect_to(@delivery, :notice => 'Delivery was successfully created.') }
+    #   format.xml  { render :xml => @delivery, :status => :created, :location => @delivery }
+    # else
+    #   format.html { render :action => "new" }
+    #   format.xml  { render :xml => @delivery.errors, :status => :unprocessable_entity }
+    # end
+    #end
   end
 
   # PUT /deliveries/1
