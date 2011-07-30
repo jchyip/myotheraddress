@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730041437) do
+ActiveRecord::Schema.define(:version => 20110730063134) do
 
   create_table "confirmations", :force => true do |t|
     t.datetime "created_at"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(:version => 20110730041437) do
   create_table "deliveries", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.date     "order_date"
+    t.date     "expected_date"
+    t.string   "status"
   end
 
   create_table "logins", :force => true do |t|
