@@ -7,8 +7,27 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
+<div id="body">
+        <div id="top_div">
+                <div id="top_content">
+                         <img src="/images/MOA2.jpg" alt="mail dlivery" style="width:300px;"><p style="font-color:#FF0000;font-weight:bold;float:right;padding-right:600px"><i>your mail will never get lost</i> </p>
+                </div>
+        </div>
 
+        <div class="menu">
+                <div class="menu_content">
+                        <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="solutions.html">About Us</a></li>
+                                <li><a href="solutions.html">Services</a></li>
+                                <li><a href="index.html">Company</a></li>
+                                <li><a href="index.html">Support</a></li>
+                        </ul>
+                </div>
+        </div>
+
+<body>
+	
 <%= yield %>
 
 </body>

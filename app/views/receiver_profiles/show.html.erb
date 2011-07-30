@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @receiver_profile.name %></h1>
+<% if @receiver_profile.id == 1 %>
+<%= image_tag("rating-star.jpg") %><%= image_tag("rating-star.jpg") %><%= image_tag("rating-star.jpg") %><%= image_tag("rating-star.jpg") %>
+<% elsif @receiver_profile.id == 2 %>
+<%= image_tag("rating-star.jpg") %><%= image_tag("rating-star.jpg") %>
+<% else %>
+<%= image_tag("rating-star.jpg") %>
+<% end %>
 
 <pre>
 <%= @receiver_profile.address %>
@@ -20,3 +27,14 @@
 <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= CGI::escape(@receiver_profile.address)%>,NSW&zoom=14&size=512x312&maptype=roadmap&markers=color:blue%7C<%= @receiver_profile.latitude %>,<%= @receiver_profile.longitude %>&sensor=false" />
 
 <p />
+
+<h2>Testimonials:</h2>
+<br  />
+<%= image_tag("ch.jpg") %><span style="padding-top:10px";><b><a href="#">Charlie Sheen</a></b></span>     
+<p><i>My secret package is safely delivered!! Winning</i></p>
+<p style="font-size:10px;"> Jun 25 at 10:36am </p>
+
+<%= image_tag("dexter.jpg") %><span style="padding-top:10px";><b><a href="#">Dexter Morgan</a></b></span>
+<p><i>All in one piece like before A++++ RECOMENDED</i></p>
+<p style="font-size:10px;"> July 12 at 5:36am </p>
+
