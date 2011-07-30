@@ -4,7 +4,7 @@
 <head> 
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
-<title>Google Maps JavaScript API v3 Example: Info Window Simple</title> 
+<title></title> 
 <style type="text/css">
 html, body {
   height: 100%;
@@ -13,8 +13,8 @@ html, body {
 }
 
 #map_canvas {
-  height: 500px;
-  width:700px;
+  height: 600px;
+  width:800px;
 }
 
 @media print {
@@ -30,6 +30,11 @@ body, .bubbleContent, .bubbleHeading {
   font-family: verdana,arial,sans-serif;
   font-size:small;
 }
+
+.bubbleContent td, .bubbleHeading td{
+  font-size:11px;
+}
+
 .bubbleThumbnail {
   width:400px;
   height:150px;
@@ -46,7 +51,7 @@ body, .bubbleContent, .bubbleHeading {
     var myLatlng2 = new google.maps.LatLng(-33.890375, 151.28266);
     var myLatlng3 = new google.maps.LatLng(-33.890039, 151.282897);
     var myOptions = {
-      zoom: 15,
+      zoom: 16,
       center: myLatlng1,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -66,19 +71,19 @@ body, .bubbleContent, .bubbleHeading {
         '<td>Sat</td>'+
         '</tr>'+
         '<tr>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
         '</tr></table>'+
         '<span style="font-weight:bold">Closed</span>'+
         '<table><tr>'+
         '<td>Dec 25th</td>'+
         '</tr></table>'+
-        '<input type="submit" value="Use this address" />'+
+        '<input type="submit" value="Use this address" onclick="document.location=\'/receiver_profiles/1/\'"/>'+
         '</div>'+
         '</div>';
 
@@ -95,19 +100,19 @@ body, .bubbleContent, .bubbleHeading {
         '<td>Sat</td>'+
         '</tr>'+
         '<tr>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
         '</tr></table>'+
         '<span style="font-weight:bold">Closed</span>'+
         '<table><tr>'+
         '<td>Dec 25th</td>'+
         '</tr></table>'+
-        '<input type="submit" value="Use this address" />'+
+        '<input type="submit" value="Use this address" onclick="document.location=\'/receiver_profiles/2/\'"/>'+
         '</div>'+
         '</div>';
 
@@ -125,19 +130,19 @@ body, .bubbleContent, .bubbleHeading {
         '<td>Sat</td>'+
         '</tr>'+
         '<tr>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
-        '<td>08:30-20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
+        '<td>08:30-<br />20:30</td>'+
         '</tr></table>'+
         '<span style="font-weight:bold">Closed</span>'+
         '<table><tr>'+
         '<td>Dec 25th</td>'+
         '</tr></table>'+
-        '<input type="submit" value="Use this address" />'+
+        '<input type="submit" value="Use this address" onclick="document.location=\'/receiver_profiles/3/\'"/>'+
         '</div>'+
         '</div>';
 

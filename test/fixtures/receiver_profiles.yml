@@ -15,15 +15,15 @@
 2: 
   id: 2
   name: North Bondi RSL
-  latitude: 2
-  longitude: 2
+  latitude: -33.890375
+  longitude: 151.28266
   address: "118-120 Ramsgate Avenue,\nNorth Bondi NSW 2026"
   rating: 4
 
 3: 
   id: 3
   name: Julians house
-  latitude: 3
-  longitude: 3
+  latitude: -33.890039
+  longitude: 151.282897
   address: "99 Brighton Blvd\nNorth Bondi NSW 2026"
   rating: 3
