@@ -1,0 +1,17 @@
+<%= form_for(@receiver_profile) do |f| %>
+  <% if @receiver_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@receiver_profile.errors.count, "error") %> prohibited this receiver_profile from being saved:</h2>
+
+      <ul>
+      <% @receiver_profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

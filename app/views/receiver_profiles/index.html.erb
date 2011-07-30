@@ -1,0 +1,21 @@
+<h1>Listing receiver_profiles</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @receiver_profiles.each do |receiver_profile| %>
+  <tr>
+    <td><%= link_to 'Show', receiver_profile %></td>
+    <td><%= link_to 'Edit', edit_receiver_profile_path(receiver_profile) %></td>
+    <td><%= link_to 'Destroy', receiver_profile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Receiver profile', new_receiver_profile_path %>

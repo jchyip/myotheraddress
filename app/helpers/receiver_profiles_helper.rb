@@ -1,0 +1,2 @@
+module ReceiverProfilesHelper
+end

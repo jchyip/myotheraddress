@@ -1,4 +1,14 @@
 Myotheraddress::Application.routes.draw do
+  resources :receiver_profiles
+
+  resources :select_receivers
+
+  resources :logins
+
+  resources :payments
+
+  resources :confirmations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +58,7 @@ Myotheraddress::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "select_receivers#index"
 
   # See how all your routes lay out with "rake routes"
 
