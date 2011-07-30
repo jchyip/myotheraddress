@@ -1,0 +1,22 @@
+<h1>Delivery List</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @deliveries.each do |delivery| %>
+  <tr>
+	<td><%= delivery.name %></td>
+	<td><%= delivery.expected_date %></td>
+	<td><%= delivery.status %>
+	<td><%= link_to 'Received', delivery %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Delivery', new_delivery_path %>

@@ -1,4 +1,6 @@
 Myotheraddress::Application.routes.draw do
+  resources :deliveries
+
   resources :receiver_profiles
 
   resources :select_receivers
