@@ -12,6 +12,7 @@
 <%= @receiver_profile.address %>
 </pre>
 
+<div id="bumhole" >
 <%= form_for(@delivery) do |f| %>
 
     <%= f.text_field :customer , :placeholder => 'Your email' %>
@@ -27,7 +28,7 @@
 <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= CGI::escape(@receiver_profile.address)%>,NSW&zoom=14&size=512x312&maptype=roadmap&markers=color:blue%7C<%= @receiver_profile.latitude %>,<%= @receiver_profile.longitude %>&sensor=false" />
 
 <p />
-
+</div>
 <h2>Testimonials:</h2>
 <br  />
 <%= image_tag("ch.jpg") %><span style="padding-top:10px";><b><a href="#">Charlie Sheen</a></b></span>     
@@ -37,4 +38,3 @@
 <%= image_tag("dexter.jpg") %><span style="padding-top:10px";><b><a href="#">Dexter Morgan</a></b></span>
 <p><i>All in one piece like before A++++ RECOMENDED</i></p>
 <p style="font-size:10px;"> July 12 at 5:36am </p>
-

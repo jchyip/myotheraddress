@@ -18,6 +18,20 @@ class DeliveriesController < ApplicationController
     end
   end
 
+  def markdelivered
+    @delivery = Delivery.find(params[:id])
+    if (params[:action] == 2)
+      @delivery.status = 'Received'
+    elsif (params[:action] == 1)
+      @delivery.status = 'Unreceived'
+    end
+    @delivery.save
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # GET /deliveries/1
   # GET /deliveries/1.xml
   def show
