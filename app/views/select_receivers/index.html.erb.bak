@@ -6,32 +6,6 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
 <title></title> 
 <style type="text/css">
-#top_div {
-        height: 400px;
-        width: 100%;
-        background-size:100%;
-        background-image:url("/images/org.jpg");
-}
-
-#top_content {
-         padding-right: 100px;
-
-}
-
-#text-content {
-float:right;
-right:300px;
-top:100px;
-position: absolute;
-
-}
-
-#content_crap{
-
-padding-left:100px;
-
-}
-
 html, body {
   height: 100%;
   margin: 0;
@@ -40,8 +14,13 @@ html, body {
 
 #map_canvas {
   height: 600px;
-  width:900px;
+  width:100%;
 }
+
+#bumhole {
+ padding-left:50px;
+}
+
 
 @media print {
   html, body {
@@ -67,17 +46,6 @@ body, .bubbleContent, .bubbleHeading {
 }
 
 </style>
-<div id="top_div">
-<div id="top_content">
-<img src="/images/pckg.png">
-<div id="text-content" >
-<h2>1. Find Drop Off </h2><br />
-<h2>2. Confirm Location </h2><br />
-<h2>3. Order your Item</h2><br />
-
-</div>
-</div>
-<div id="content_crap">
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
 <script type="text/javascript"> 
   var geocoder;
@@ -241,11 +209,10 @@ body, .bubbleContent, .bubbleHeading {
   }
 </script> 
 </head> 
-<body onload="initialize()"> 
+<body onload="initialize()" style="padding:50px"> 
   <input type="text" placeholder="Enter an address" style="width:300px" id="address" />
-  <input type="button" class="btn" value="Search" onclick="codeAddress()">
+  <input type="button" value="Search" onclick="codeAddress()">
   <p />
   <div id="map_canvas"></div> 
 </body> 
-</div>
 </html> 
