@@ -1,0 +1,24 @@
+  <tr id="delivery_<%= @delivery.id %>">
+  <td><%= @delivery.name %></td>
+  <td><%= @delivery.expected_date %></td>
+  <td>
+    <% if @delivery.status == 'Received' %>
+      <%= image_tag '/images/iconShip_color_16x16.png' %>
+    <% else %>
+      <%= image_tag '/images/iconShip_lt_16x16.png' %>
+    <% end %>
+  </td>
+  <td>
+    <% form_for :delivery, :url => { :action => 'markdelivered', :id => @delivery, :controller => 'deliveries'}, :remote => true do %>
+    <select name="action" onchange="if(this.value>0){document.forms[0].onsubmit()}">
+      <option value="0">Select action...</option>
+      <% if @delivery.status == 'Received' %>
+        <option value="1">Unmark received</option>
+      <% else %>
+        <option value="2">Mark as received</option>
+      <% end %>
+    </select>
+    <% end %>
+  </td>
+  </tr>
+

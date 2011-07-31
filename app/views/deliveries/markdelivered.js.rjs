@@ -1,0 +1,1 @@
+page.replace_html('delivery_'<%= @delivery.id %>, :partial => 'delivery', :object => @delivery)
