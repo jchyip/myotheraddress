@@ -12,6 +12,7 @@
 <%= @receiver_profile.address %>
 </pre>
 
+<p>
 <%= form_for(@delivery) do |f| %>
 
     <%= f.text_field :customer , :placeholder => 'Your email' %>
@@ -19,10 +20,7 @@
 
     <%= f.submit :value => 'Book delivery' %>
 <% end %>
-
-
-
-<p />
+</p>
 
 <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= CGI::escape(@receiver_profile.address)%>,NSW&zoom=14&size=512x312&maptype=roadmap&markers=color:blue%7C<%= @receiver_profile.latitude %>,<%= @receiver_profile.longitude %>&sensor=false" />
 

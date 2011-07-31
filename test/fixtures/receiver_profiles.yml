@@ -6,7 +6,7 @@
 #
 1: 
   id: 1
-  name: Nio and Tonys convenience store
+  name: Nio and Tony's convenience store
   latitude: -33.889427
   longitude: 151.283011
   address: "294A Campbell Parade,\nNorth Bondi NSW 2026"
@@ -22,7 +22,7 @@
 
 3: 
   id: 3
-  name: Julians house
+  name: Julian's house
   latitude: -33.890039
   longitude: 151.282897
   address: "99 Brighton Blvd\nNorth Bondi NSW 2026"
